@@ -19,5 +19,6 @@ read.spss
 library(foreign)
 head(testDatos)
 summary(testData)
+testData$educ
 
 
