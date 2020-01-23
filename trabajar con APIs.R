@@ -28,3 +28,14 @@ FORMATO='data.pjson/'
 request2=paste0(GUID,FORMATO,'?auth_key=',millave)
 serenosSI = fromJSON(request2)
 serenosSI 
+
+
+library(Rfacebook)
+library(httpuv)
+library(RColorBrewer)
+
+
+token="EAAfSdx4Dli8BAODe5F9FYyiJ7I6R3a5WOKNhlQFFFl3dV4xR6biDesARhhS43IQK0ZCym8pwIHakBBcQSCpbSySzcG7hpuMfBTZBuc3cczukSxWUKFrHqRBLspTgv74JwZCEBAZCgTNHYbI2KROdq2MzSUvjgCxkDpejmxWjWZAA0NdU0ZBZAHwcScPZAR4qtMSfnhBLjp0ZBnAZDZD"
+options(RCurloptions=list(verbose=FALSE,capath=system.file("curlSSL","cacert.pem",package="RCurl")))
+me<-getUsers("me",token = token)
+me
